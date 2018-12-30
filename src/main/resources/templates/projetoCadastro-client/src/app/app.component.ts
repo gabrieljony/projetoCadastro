@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'projetoCadastro-client';
+  title = 'Projeto Cadastro de Clientes';
+  description = 'Spring Boot 2 + Angular 7 example | Spring Data JPA + REST + PostgreSQL CRUD example';
 }
