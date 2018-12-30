@@ -5,7 +5,7 @@ Neste CRUD, mostro o exemplo do HttpClient Angular 7 e do Spring Boot Server que
 ## Estrutura do Projeto
 ### Spring Boot Server
 
-![spring](src/main/resources/templates/projetoCadastro-client/src/project_struture-spring_boot_server.png)
+![spring](src/main/resources/templates/projetoCadastro-client/src/image/project_struture-spring_boot_server.png)
 
 ## Instalação dos módulos
 
