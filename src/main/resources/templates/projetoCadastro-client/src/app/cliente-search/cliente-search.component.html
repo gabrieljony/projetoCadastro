@@ -1,3 +1,18 @@
-<p>
-  cliente-search works!
-</p>
+<h3>Pesquisar pelo CPF</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="lastname">Cpf</label>
+      <input type="text" class="form-control" id="cpf" required [(ngModel)]="cpf" name="cpf">
+    </div>
+ 
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Pesquisar</button>
+    </div>
+  </form>
+</div>
+<ul>
+  <li *ngFor="let cliente of clientes">
+    <h3>{{cliente.id}} - {{cliente.nome}} {{cliente.cpf}}</h3>
+  </li>
+</ul>

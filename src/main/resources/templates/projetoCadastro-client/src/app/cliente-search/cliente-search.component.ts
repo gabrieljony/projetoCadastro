@@ -1,4 +1,6 @@
+import { ClienteService } from './../cliente.service';
 import { Component, OnInit } from '@angular/core';
+import { Cliente } from '../cliente';
 
 @Component({
   selector: 'app-cliente-search',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteSearchComponent implements OnInit {
 
-  constructor() { }
+  cpf: number;
+  clientes: Cliente[];
+
+  constructor(private servico: ClienteService) { }
 
   ngOnInit() {
+    this.cpf = 0;
+  }
+
+  private pesquisarClientes() {
+    this.servico.getClienteByCpf(this.cpf)
+      .subscribe(dados => this.clientes = dados);
+  }
+ 
+  onSubmit() {
+    this.pesquisarClientes();
   }
 
 }
