@@ -30,7 +30,7 @@ export class ClienteDetailsComponent implements OnInit {
         error => console.log(error));
   }
  
-  deleteCliente() {
+  deletarCliente() {
     this.servico.deleteCliente(this.cliente.id)
       .subscribe(
         data => {

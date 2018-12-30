@@ -3,7 +3,7 @@ package com.example.gabrieljony.projetoCadastroapi.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "cliente")
+@Table(name = "clientes")
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -13,7 +13,7 @@ public class Cliente {
     private String nome;
 
     @Column(name = "cpf")
-    private int cpf;
+    private long cpf;
 
     @Column(name = "ativo")
     private boolean ativo;
@@ -21,7 +21,7 @@ public class Cliente {
     public Cliente() {
     }
 
-    public Cliente(String nome, int cpf) {
+    public Cliente(String nome, long cpf) {
         this.nome = nome;
         this.cpf = cpf;
         this.ativo = false;
@@ -43,11 +43,11 @@ public class Cliente {
         this.nome = nome;
     }
 
-    public int getCpf() {
+    public long getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(long cpf) {
         this.cpf = cpf;
     }
 

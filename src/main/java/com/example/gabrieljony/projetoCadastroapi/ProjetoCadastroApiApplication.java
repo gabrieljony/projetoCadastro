@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ProjetoCadastroApiApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(ProjetoCadastroApiApplication.class, args);
 	}
 

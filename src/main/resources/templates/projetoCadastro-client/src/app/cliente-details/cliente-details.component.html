@@ -15,11 +15,11 @@
           <td>{{cliente.nome}}</td>
           <td>{{cliente.cpf}}</td>
           <td>{{cliente.ativo}}</td>
-          <td><span class="button is-small btn-primary" *ngIf='cliente.ativo' (click)='updateAtivo(false)'>Inativo</span>
+          <td><span class="button is-small btn-primary" *ngIf='cliente.ativo' (click)='updateAtivo(false)'>Inativar</span>
 
-            <span class="button is-small btn-primary" *ngIf='!cliente.ativo' (click)='updateAtivo(true)'>Ativo</span>
+            <span class="button is-small btn-primary" *ngIf='!cliente.ativo' (click)='updateAtivo(true)'>Ativar</span>
           {{' '}}
-            <span class="button is-small btn-danger" (click)='deleteCliente()'>Delete</span></td>
+            <span class="button is-small btn-danger" (click)='deletarCliente()'>Delete</span></td>
         </tr>
       </tbody>
     </table>
