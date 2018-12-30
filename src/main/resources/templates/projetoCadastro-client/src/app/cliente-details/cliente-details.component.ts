@@ -19,7 +19,7 @@ export class ClienteDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  updateAtivo(isActive: boolean) {
+  updateAtivo(isAtivo: boolean) {
     this.servico.updateCliente(this.cliente.id,
       { nome: this.cliente.nome, cpf: this.cliente.cpf, ativo: isAtivo })
       .subscribe(
