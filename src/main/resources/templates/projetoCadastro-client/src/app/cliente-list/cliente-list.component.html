@@ -1,9 +1,8 @@
-<h1>Lista de Clientes</h1>
- 
+<h3>Lista de Clientes</h3>
 <div *ngFor="let cliente of clientes | async" style="width: 300px;">
   <app-cliente-details [cliente]='cliente'></app-cliente-details>
 </div>
  
 <div>
-  <button type="button" class="button btn-danger" (click)='deleteTodosClientes()'>Delete Todos Clientes</button>
+  <button type="button" class="btn btn-danger" (click)='deleteTodosClientes()'>Delete Todos Clientes</button>
 </div>

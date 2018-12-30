@@ -1,10 +1,26 @@
-<div style="padding: 20px;">
-  <h1 style="color: blue">{{title}}</h1>
-  <h3>{{description}}</h3>
-  <nav>
-    <a routerLink="clientes" class="btn btn-primary active" role="button" routerLinkActive="active">Clientes</a>
-    <a routerLink="criar" class="btn btn-primary active" role="button" routerLinkActive="active">Criar</a>
-    <a routerLink="pesquisar" class="btn btn-primary active" role="button" routerLinkActive="active">Pesquisar</a>
-  </nav>
-  <router-outlet></router-outlet>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="https://andrewlock.net/content/images/2016/10/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    {{title}}
+  </a>
+  <div class="container">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      </div>
+    </div>  
+</nav>
+<div class="row">
+    <div class="col-2">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a routerLink="clientes" class="nav-link" id="v-pills-home-tab" data-toggle="pill" role="tab" routerLinkActive="active">Lista de Clientes</a>
+        <a routerLink="criar" class="nav-link" id="v-pills-profile-tab" data-toggle="pill" role="tab" routerLinkActive="active">Cadastrar Cliente</a>
+        <a routerLink="pesquisar" class="nav-link" id="v-pills-messages-tab" data-toggle="pill" role="tab" routerLinkActive="active">Pesquisar pelo Cpf</a>
+      </div>
+    </div>
+    <div class="col-10">
+        <div class="container" style="padding: 20px;">
+        <h3>{{description}}</h3>
+        <br>
+        <router-outlet></router-outlet>
+    </div>
+  </div>

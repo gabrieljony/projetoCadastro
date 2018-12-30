@@ -15,7 +15,6 @@ export class ClienteSearchComponent implements OnInit {
   constructor(private servico: ClienteService) { }
 
   ngOnInit() {
-    this.cpf = 0;
   }
 
   private pesquisarClientes() {

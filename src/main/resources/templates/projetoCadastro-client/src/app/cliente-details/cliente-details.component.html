@@ -1,19 +1,27 @@
 <div *ngIf="cliente">
-  <div>
-    <label>Nome: </label> {{cliente.nome}}
-  </div>
-  <div>
-    <label>Cpf: </label> {{cliente.cpf}}
-  </div>
-  <div>
-    <label>Ativo: </label> {{cliente.ativo}}
-  </div>
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Cpf</th>
+          <th scope="col">Ativo</th>
+          <th scope="col">Operção</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{cliente.id}}</td>
+          <td>{{cliente.nome}}</td>
+          <td>{{cliente.cpf}}</td>
+          <td>{{cliente.ativo}}</td>
+          <td><span class="button is-small btn-primary" *ngIf='cliente.ativo' (click)='updateAtivo(false)'>Inativo</span>
 
-  <span class="button is-small btn-primary" *ngIf='cliente.ativo' (click)='updateAtivo(false)'>Inativo</span>
-
-  <span class="button is-small btn-primary" *ngIf='!cliente.ativo' (click)='updateAtivo(true)'>Ativo</span>
-{{' '}}
-  <span class="button is-small btn-danger" (click)='deleteCliente()'>Delete</span>
-
+            <span class="button is-small btn-primary" *ngIf='!cliente.ativo' (click)='updateAtivo(true)'>Ativo</span>
+          {{' '}}
+            <span class="button is-small btn-danger" (click)='deleteCliente()'>Delete</span></td>
+        </tr>
+      </tbody>
+    </table>
   <hr/>
 </div>
